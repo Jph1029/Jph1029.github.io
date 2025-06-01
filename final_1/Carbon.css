@@ -1,0 +1,97 @@
+/* 全站樣式 */
+body {
+  background-color: #e6f2e6;  /* 抹茶綠 */
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  overflow-x: hidden; /* ✅ 避免水平滾動條 */
+}
+
+/* 標題區 */
+h1 {
+  font-size: 250%;
+  margin-top: 1.5%;
+  margin-bottom: 1.2%;
+}
+
+h2 {
+  font-size: 130%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 200%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+h4 {
+  font-size: 130%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: normal;
+}
+
+/* h3 內的連結美化 */
+.map-box h3 a {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.map-box h3 a:hover {
+  color: #1e4532;
+}
+
+/* 主要地圖容器（左右排版） */
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8vw;
+  flex-wrap: wrap;
+}
+
+/* 每個地圖欄位區塊 */
+.map-box {
+  text-align: center;
+  font-size: 100%;
+}
+
+/* 圖片樣式 */
+.map-box img {
+  width: 100%;
+  max-width: 800px; /* ✅ 控制最大寬度 */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 返回按鈕樣式 */
+.back-button {
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #2d6a4f;
+  background-color: #e6f2e6;
+  border: 2px solid #2d6a4f;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 999;
+}
+
+.back-button:hover {
+  background-color: #2d6a4f;
+  color: white;
+}

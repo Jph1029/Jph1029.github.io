@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>臺北市各行政區樹木數量統計</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="County.css" />
+</head>
+<body class="chartpage">
+
+  <h2>臺北市各行政區樹木數量統計</h2>
+
+  <div class="tabs">
+    <button id="barStreetBtn" class="active">行道樹長條圖</button>
+    <button id="barParkBtn">公園綠樹長條圖</button>
+    <a href="Stree.html" target="_blank">行道樹面量圖</a>
+    <a href="Ptree.html" target="_blank">公園綠樹面量圖</a>
+  </div>
+
+  <canvas id="treeChart" width="800" height="500"></canvas>
+
+  <a href="Tree.html" class="back-button">← 回上一頁</a>
+
+  <script>
+    const ctx = document.getElementById('treeChart');
+    const dataSets = {
+      street: {
+        label: '行道樹數量',
+        labels: ['大安區', '北投區', '士林區', '中山區', '松山區', '信義區', '萬華區', '內湖區', '中正區', '南港區', '文山區', '大同區'],
+        data: [14599, 10813, 10753, 9498, 8085, 7922, 7742, 7702, 6692, 6664, 4665, 3451]
+      },
+      park: {
+        label: '公園綠樹數量',
+        labels: ['士林區', '大安區', '內湖區', '中山區', '南港區', '萬華區', '文山區', '信義區', '中正區', '松山區', '北投區', '大同區'],
+        data: [9541, 6881, 6706, 4284, 4246, 3952, 2919, 2498, 2439, 2014, 1717, 637]
+      }
+    };
+
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: dataSets.street.labels,
+        datasets: [{
+          label: dataSets.street.label,
+          data: dataSets.street.data,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: { ticks: { font: { size: 14 } } },
+          y: { beginAtZero: true, ticks: { font: { size: 14 } } }
+        },
+        plugins: {
+          legend: { labels: { font: { size: 16 } } }
+        }
+      }
+    });
+
+    document.getElementById('barStreetBtn').onclick = () => {
+      updateChart(dataSets.street);
+      setActive('barStreetBtn');
+    };
+
+    document.getElementById('barParkBtn').onclick = () => {
+      updateChart(dataSets.park);
+      setActive('barParkBtn');
+    };
+
+    function updateChart(dataset) {
+      chart.data.labels = dataset.labels;
+      chart.data.datasets[0].label = dataset.label;
+      chart.data.datasets[0].data = dataset.data;
+      chart.update();
+    }
+
+    function setActive(id) {
+      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+body.homepage {
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/0503.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px 60px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.center-box h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ========= ABOUT 頁背景淡化 ========== */
+body.aboutpage {
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/VN.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 外層半透明遮罩，保留背景圖感覺 */
+.about-wrapper {
+    background-color: rgba(255, 255, 255, 0.65);
+    /* 可調整透明度淡化程度 */
+    padding: 30px 20px;
+    min-height: 60vh;
+    min-width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #eef0ea;
+    padding: 12px 30px;
+    display: inline-block;
+    /* 讓背景只包住文字 */
+    border-radius: 6px;
+    margin: 0 auto 30px auto;
+
+}
+
+/* 外層橫排容器：圖片靠左，文字靠右 */
+.profile-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+/* 照片靠左 */
+.profile-img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.profile-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    max-width: 400px;
+}
+
+.profile-info-inline {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-info-inline p {
+    margin: 500;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 名言樣式 */
+.quote {
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+    line-height: 3;
+}
+
+/* 圓形按鈕列 */
+.circle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+/* 客製按鈕配色 */
+.circle.pink {
+    background-color: #f7c5cc;
+}
+
+.circle.peach {
+    background-color: #fbd6b6;
+}
+
+.circle.mist {
+    background-color: #b5d8d6;
+}
+
+.circle.blue {
+    background-color: #b4c6e7;
+}
+
+.circle.home {
+    background-color: #e6d3f8;
+}
+
+
+/* === more.html / about.html 背景設定 === */
+
+.heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    padding: 12px 24px;
+    margin: 0 auto 20px auto;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.chart-subtitle {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto 20px auto;
+    color: #666;
+    font-style: italic;
+}
+
+.chart-box {
+    width: 300px;
+    margin: 0 auto 40px auto;
+}
+
+/* 左下角小按鈕 */
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* === travel.html / about.html 背景設定與排版 === */
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+    color: #222;
+}
+
+.travel-quote {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.travel-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.travel-item {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.travel-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.travel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* === hobby.html / about.html 背景設定與排版 === */
+.hobby-gif-box {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.my-gif {
+    width: 270px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hobby-text-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}

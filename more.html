@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>更多 - JPH</title>
+    <link rel="stylesheet" href="JPH_webpage.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="aboutpage">
+    <div class="about-wrapper">
+        <div class="about-container">
+            <h1 class="heading no-background">JPH的調製配方><</h1> <div class="chart-box">
+                    <canvas id="funChart"></canvas>
+        </div>
+    </div>
+    </div>
+    <a href="About_JPH.html" class="btn back-btn">← 回上一頁</a>
+    <script>
+    const funData = {
+        labels: ['🍜 食物', '🛌 睡眠', '🌀 天然呆', '💡 小聰明', '✨ 其他'],
+        datasets: [{
+            label: '搞笑人格構成',
+            data: [25, 25, 30, 15, 5],
+            backgroundColor: [
+                '#e89e8f', // 吃
+                '#90b8a5', // 睡
+                '#e4be9e', // 天然呆
+                '#a4b5d1', // 小聰明
+                '#c2b0d6' // 其他
+            ],
+            hoverOffset: 6
+        }]
+    };
+
+    const funCtx = document.getElementById('funChart');
+
+    new Chart(funCtx, {
+        type: 'doughnut',
+        data: funData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            animation: {
+                animateScale: true
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

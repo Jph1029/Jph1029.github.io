@@ -1,0 +1,68 @@
+/* 整體頁面 */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #e6f2e6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+}
+
+/* 標題 */
+h1 {
+  font-size: 300%;
+  margin: 1em 0 0.8em;   
+}
+
+/* 導覽列 */
+.nav {
+  display: flex;         
+  justify-content: center;
+  gap: 8em;              
+  margin-bottom: 2%;
+  font-size: 130%;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #2d6a4f;
+}
+
+/* 主內容：圖文左右並排 */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  
+  padding: 2em 5%;
+  gap: 5%;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* 文字區 */
+.text {
+  flex: 2;
+  max-width: 40%;
+  font-size: 120%;
+  line-height: 2;
+}
+
+/* 圖片區 */
+.image-crop {
+  flex: 1;
+  max-width: 35%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.image-crop img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
